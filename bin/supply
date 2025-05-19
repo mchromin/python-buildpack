@@ -12,8 +12,8 @@ export LANG=${LANG:-en_US.UTF-8}
 
 # Install necessary packages
 echo "-----> Installing required packages"
-sudo apt-get update
-sudo apt-get install -y cifs-utils
+apt-get update
+apt-get install -y cifs-utils
 
 export BUILDPACK_DIR=$(dirname $(readlink -f ${BASH_SOURCE%/*}))
 source "$BUILDPACK_DIR/scripts/install_go.sh"
